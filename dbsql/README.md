@@ -118,4 +118,38 @@ Global Admin権限を持つユーザーで[Azure Databricks Account Console](htt
 
 
 
+# Databricks SQLを使う
+
+## SQLウェアハウスを立ち上げる
+
+`SQLウェアハウス`は計算機リソース(VMのクラスタ)で、Databricks SQLでクエリ実行エンジンとして機能する。小さいサイズのSQLウェアハウスを立ち上げてクエリ実行する。
+
+1. Databricksワークスペースにログインする
+1. 左上のペイン選択(デフォルトだと`Data Science & Engineering`が選ばれている)で`SQL`を選択する
+1. (Databricks SQLモードにページ遷移する)
+1. 左メニューから`SQLウェアハウス`を選択する
+1. デフォルトで作成されている`Starter Warehouse`の右にあるメニュー(ケバブメニューアイコン)から`編集`をクリックし、以下の項目を設定し`保存`をクリック
+    * クラスタサイズ: `X-Small`
+    * 自動停止: `10分`
+1. `開始`ボタンを押して、ウェアハウスを立ち上げる(立ち上がるまで1-2分程度)
+
+![sql_warehouse](./resource/sql_warehouse.png)
+
+## クエリ実行
+
+(SQLウェアハウスが立ち上がったら)
+1. 左メニューから`SQLエディタ`を開く
+1. エディタ窓の右上で、先ほど立ち上げたSQL Warehouse(`Starter Warehouse`)を選択する
+1. エディタに以下のクエリをコピー&ペーストして`実行`をクリックする
+    ```sql
+    SELECT * FROM samples.tpch.customer;
+    ```
+1. 結果のテーブルが下に表れる
+(注意: warehouse立ち上げ後は数秒程度遅延が発生する場合があります)
+
+![query_execution](./resource/query_execution.png)
+
+## カタログを参照する
+
+
 
