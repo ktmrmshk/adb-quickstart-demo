@@ -19,7 +19,7 @@
 * ETLとELT
 * ローカルデータの取り込み
 
-
+(最後に書き足す)
 
 # セットアップ
 
@@ -149,7 +149,20 @@ Global Admin権限を持つユーザーで[Azure Databricks Account Console](htt
 
 ![query_execution](./resource/query_execution.png)
 
+## ローカルのデータ(CSV, JSON)を取り込む
+ 
+
 ## カタログを参照する
 
+## ダッシュボードを作る(Redash)
 
+
+## 外部のADLS/Blogストレージ上のデータを読み込む
+
+## 外部のRDBMSと連携する
+
+
+## データ加工のパイプラインを構成する(ETLとELT)
+
+(DLTがUC対応したらそのシナリオを書き足す)
 
